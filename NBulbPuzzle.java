@@ -8,8 +8,12 @@ public class NBulbPuzzle {
 
 	public static int getTotalShiningMoments(int[] A)
 	{
+		int totalShiningMoments = 0;
 		int totalBulbs = A.length;
-		if (totalBulbs == 1 && A[0] == 1) return 1;
+		if (totalBulbs == 1) {
+			totalShiningMoments = (A[0] == 1)? 1: 0;
+			return totalShiningMoments;
+		}
 		Map<Integer, Integer> stateDictionary = getInitializedStateDictionary(A);
 		int totalShiningMoments = 0;
 		for (int moment = 0; moment < A.length; moment ++)
