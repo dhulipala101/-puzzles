@@ -41,7 +41,7 @@ public class NBulbPuzzle {
 			  else return 0;
 		  }
 		}
-		return (i != 1 && dictionary.get(i-1) == 1)? 1: 0;
+		return (i != 1 && dictionary.containsKey(i-1) && dictionary.get(i-1) == 1)? 1: 0;
 	}
 	
 	public static Map<Integer, Integer> getInitializedStateDictionary(int[] A)
